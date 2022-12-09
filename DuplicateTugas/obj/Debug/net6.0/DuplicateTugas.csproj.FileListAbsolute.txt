@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\bin\Debug\net6.0\DuplicateTugas.exe
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\bin\Debug\net6.0\DuplicateTugas.deps.json
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\bin\Debug\net6.0\DuplicateTugas.runtimeconfig.json
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\bin\Debug\net6.0\DuplicateTugas.dll
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\bin\Debug\net6.0\DuplicateTugas.pdb
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.AssemblyInfo.cs
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.dll
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\refint\DuplicateTugas.dll
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.pdb
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\DuplicateTugas.genruntimeconfig.cache
+C:\Users\user\source\repos\DuplicateTugas\DuplicateTugas\obj\Debug\net6.0\ref\DuplicateTugas.dll

@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            TampilanUtama();
         }
 
         static void TampilanUtama()
@@ -15,6 +15,8 @@
             Console.WriteLine("3. Search User");
             Console.WriteLine("4. Login User ");
             Console.WriteLine("5. Exit");
+            Console.Write("Input : ");
+            int input =Convert.ToInt32(Console.ReadLine());
         }
     }
 }
