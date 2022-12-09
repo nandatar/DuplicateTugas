@@ -17,6 +17,8 @@
             Console.WriteLine("5. Exit");
             Console.Write("Input : ");
             int input =Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Coba");
         }
     }
 }
