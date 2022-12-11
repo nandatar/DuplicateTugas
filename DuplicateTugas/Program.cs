@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using System;
+using System.Reflection;
 
 namespace DuplicateTugas
 {
@@ -11,7 +12,7 @@ namespace DuplicateTugas
         static string[] pw = { };
         static string[] uname = { };
         static int[] id_user= { };
-        int indexUser;
+        static int indexUser;
 
         static void Main(string[] args)
         {
@@ -38,6 +39,12 @@ namespace DuplicateTugas
                 case 2:
                     ShowUser();
                     break;
+                case 3:
+                    Console.WriteLine("==Cari Akun==");
+                    Console.WriteLine("Masukan Nama : ");
+                    string key = Console.ReadLine();
+                    SearchUser(fn, ln, key);
+                    break;
             }
         }
 
@@ -62,7 +69,7 @@ namespace DuplicateTugas
             id_user = id_user.Append(id).ToArray();
             fn = fn.Append(first_name).ToArray();
             ln = ln.Append(last_name).ToArray();
-            //pw = pw.Append(password).ToArray();
+            pw = pw.Append(password).ToArray();
             //uname = (string[])uname.Append(string.Concat(first_name.AsSpan(0,2), last_name.AsSpan(0,2)));
             id++;
         }
@@ -94,7 +101,7 @@ namespace DuplicateTugas
                     {
                         Console.Write("ID yang Ingin Diubah : ");
                         int input_id = Convert.ToInt32(Console.ReadLine());
-                        if(input_id != id_user.Length)
+                        if(input_id > id_user.Length)
                         {
                             Console.WriteLine("User Tidak Ditemukan!");
                             edit = true;
@@ -102,11 +109,11 @@ namespace DuplicateTugas
                         else
                         {
                             Console.Write("First Name\t : ");
-                            fn[id - 1] = Console.ReadLine();
+                            fn[id-1] = Console.ReadLine();
                             Console.Write("Last Name\t : ");
-                            ln[id - 1] = Console.ReadLine();
+                            ln[id-1] = Console.ReadLine();
                             Console.Write("Password\t : ");
-                            pw[id - 1] = Console.ReadLine();
+                            pw[id-1] = Console.ReadLine();
                             Console.WriteLine("User Success to Edited!");
                             edit = false;
                         }
@@ -117,8 +124,59 @@ namespace DuplicateTugas
                             return;
                         }
                     }
+                    break;
+
+                case 2:
+                    Console.WriteLine("Id yang Ingin Dihapus: ");
+                    indexUser = Convert.ToInt32(Console.ReadLine());
+                    DeleteUser(indexUser - 1);
+                    ShowUser();
+                    break;
 
             }
+        }
+
+        static void DeleteUser(int index)
+        {
+            Console.Clear();
+            int count = 0;
+            for (int i = 0; i < id_user.Length; i++)
+            {
+                if(index == id_user[i])
+                {
+                    for (int j = i; j < id_user.Length; j++)
+                    {
+                        id_user[j] = id_user[j + 1];
+                    }
+                    count = count + 1;
+                    break;
+                }
+            }if(count == 0)
+            {
+                Console.WriteLine("Element Not Found");
+            }
+            else
+            {
+                Console.WriteLine("Element Delete Successfull");
+                for (int i = 0; i < id_user.Length; i++)
+                {
+                    Console.WriteLine(id_user[i] + " ");
+                }
+            }
+            indexUser--;
+        }
+
+        static string  SearchUser(string[] fn, string[] ln, string key)
+        {
+            Console.Clear();
+            for (int i = 0; i < id_user.Length; i++)
+            {
+                if (fn == key || ln == key)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
     }
