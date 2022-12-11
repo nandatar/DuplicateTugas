@@ -213,6 +213,8 @@ namespace DuplicateTugas
                     if (x > ID.Length)
                     {
                         Console.WriteLine("User Not Found!!!");
+                        Console.ReadKey();
+                        Show();
                     }
                     //splicing array dengan list (RemoveAt)
                     List<int> a = new List<int>(ID);
