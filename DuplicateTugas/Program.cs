@@ -133,7 +133,6 @@ namespace DuplicateTugas
                 Console.WriteLine("Username: " + UserName[i]);
                 Console.WriteLine("Password: " + Password[i]);
                 Console.WriteLine("========================");
-
             }
             Console.WriteLine("\nMenu");
             Console.WriteLine("1. Edit User");
@@ -155,11 +154,11 @@ namespace DuplicateTugas
                         else
                         {
                             Console.Write("First Name : ");
-                            FirstName[id-1] = Console.ReadLine();
+                            FirstName[y-1] = Console.ReadLine();
                             Console.Write("Last Name : ");
-                            LastName[id-1] = Console.ReadLine();
+                            LastName[y-1] = Console.ReadLine();
                             Console.Write("Password : ");
-                            Password[id-1] = Console.ReadLine();
+                            Password[y-1] = Console.ReadLine();
                             Console.Write("User Succes to Edited !!! ");
                             flag = false;
                         }
@@ -178,15 +177,19 @@ namespace DuplicateTugas
                     {
                         Console.WriteLine("User Not Found!!!");
                     }
-                    int numToRemove = x;
-                    int numIndex = Array.IndexOf(ID, numToRemove);
-                    ID = ID.Where((val, idx) => idx != numIndex).ToArray();
-                    numIndex = Array.IndexOf(FirstName, numToRemove);
-                    FirstName = FirstName.Where((val, idx) => idx != numIndex).ToArray();
-                    numIndex = Array.IndexOf(LastName, numToRemove);
-                    LastName = LastName.Where((val, idx) => idx != numIndex).ToArray();
-                    numIndex = Array.IndexOf(Password, numToRemove);
-                    Password = Password.Where((val, idx) => idx != numIndex).ToArray();
+
+                    List<int> a = new List<int>(ID);
+                    a.RemoveAt(x-1);
+                    ID = a.ToArray();
+                    List<string> b = new List<string>(FirstName);
+                    b.RemoveAt(x - 1);
+                    FirstName = b.ToArray();
+                    List<string> c = new List<string>(LastName);
+                    c.RemoveAt(x - 1);
+                    LastName = c.ToArray();
+                    List<string> d = new List<string>(Password);
+                    d.RemoveAt(x - 1);
+                    Password = d.ToArray();
 
                     Console.WriteLine("User Success to Deleted !!!");
                     Console.ReadKey();
